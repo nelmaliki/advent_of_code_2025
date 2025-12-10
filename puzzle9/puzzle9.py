@@ -121,8 +121,7 @@ class Shape:
             if relative_direction is not None:
                 relative_directions[relative_direction] += 1
 
-        #Ray-Casting Algorithm: Odd number of intersections on all sides mean that the point is inside of the shape
-        #Even numbe
+        #Ray-Casting Algorithm: Odd number of intersections on all sides mean that the point is inside the shape
         return ((relative_directions[RelativeDirection.LEFT] % 2) == 1
                 and (relative_directions[RelativeDirection.RIGHT] % 2) == 1
                 and (relative_directions[RelativeDirection.DOWN] % 2) == 1
